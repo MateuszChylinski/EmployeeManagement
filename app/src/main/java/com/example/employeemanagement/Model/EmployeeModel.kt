@@ -12,6 +12,8 @@ data class EmployeeModel(
     val name: String,
     @ColumnInfo(name = "surname")
     val surname: String,
+    @ColumnInfo(name = "age")
+    val age: Int,
     @ColumnInfo(name = "workplace")
     val workplace: String,
     @ColumnInfo(name = "salary")
