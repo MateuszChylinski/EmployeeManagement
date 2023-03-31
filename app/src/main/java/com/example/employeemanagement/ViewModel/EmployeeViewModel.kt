@@ -32,20 +32,6 @@ class EmployeeViewModel @Inject constructor(
         .map { DatabaseState.Success(it) }
         .shareIn(viewModelScope, SharingStarted.WhileSubscribed(), replay = 1)
 
-//    val employeeById: SharedFlow<DatabaseState<EmployeeModel?>> =
-//        repository.get().getEmployeeById(someFlow.value)
-//            .catch {
-//                println("onCreateView VM ERROR ${it.message}")
-//                DatabaseState.Error(it.message)
-//            }
-//            .map {
-//                println("onCreateView in VM. ID ${employeeId.value}  |  data: ${it}")
-//                DatabaseState.Success(it)
-//            }
-//
-//            .shareIn(viewModelScope, SharingStarted.WhileSubscribed(), replay = 1)
-
-
     fun insertNewEmployee(employeeModel: EmployeeModel) {
         viewModelScope.launch {
             repository.get().insertEmployee(employeeModel)
