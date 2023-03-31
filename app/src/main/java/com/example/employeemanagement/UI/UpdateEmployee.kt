@@ -66,10 +66,11 @@ class UpdateEmployee : Fragment() {
             ) {
                 Toast.makeText(requireContext(), "Complete the data", Toast.LENGTH_SHORT).show()
             } else {
+                Log.i(TAG, "onCreateView updateEmployee: NO 1")
                 if (mViewModel.employeeIdFlow.value > 0) {
                     mViewModel.updateEmployee(
                         EmployeeModel(
-                            0,
+                            mViewModel.employeeIdFlow.value,
                             name = mBinding.updateEmployeeName.text.toString(),
                             surname = mBinding.updateEmployeeSurname.text.toString(),
                             age = mBinding.updateEmployeeAge.text.toString().toInt(),
@@ -77,6 +78,7 @@ class UpdateEmployee : Fragment() {
                             salary = mBinding.updateEmployeeSalary.text.toString().toDouble()
                         )
                     )
+                    Log.i(TAG, "onCreateView updateEmployee: NO 2 ")
                     findNavController().navigate(UpdateEmployeeDirections.returnToManageEmployeesFromUpdate())
                 }else{
                     Toast.makeText(requireContext(), "Wrong employee ID", Toast.LENGTH_SHORT).show()
