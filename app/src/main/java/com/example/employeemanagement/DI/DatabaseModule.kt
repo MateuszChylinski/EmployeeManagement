@@ -25,7 +25,7 @@ object DatabaseModule {
         "employee_database"
     ).build()
 
-    @Singleton
+ @Singleton
     @Provides
     fun provideDAO(database: EmployeeDatabase): EmployeeDAO{
         return database.getDAO()

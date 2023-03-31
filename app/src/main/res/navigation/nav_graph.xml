@@ -12,6 +12,10 @@
         <action
             android:id="@+id/go_to_add_employee"
             app:destination="@id/addEmployee" />
+        <action
+            android:id="@+id/go_to_update_employee"
+            app:destination="@id/updateEmployee" />
+
     </fragment>
     <fragment
         android:id="@+id/addEmployee"
@@ -19,7 +23,16 @@
         android:label="fragment_add_employee"
         tools:layout="@layout/fragment_add_employee" >
         <action
-            android:id="@+id/go_to_manage_employees"
+            android:id="@+id/return_to_manage_employees_from_add_employee"
+            app:destination="@id/manageEmployees" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateEmployee"
+        android:name="com.example.employeemanagement.UI.UpdateEmployee"
+        android:label="fragment_update_employee"
+        tools:layout="@layout/fragment_update_employee" >
+        <action
+            android:id="@+id/return_to_manage_employees_from_update"
             app:destination="@id/manageEmployees" />
     </fragment>
 </navigation>
