@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/manageEmployees">
+    <fragment
+        android:id="@+id/manageEmployees"
+        android:name="com.example.employeemanagement.UI.ManageEmployees"
+        android:label="fragment_manage_employees"
+        tools:layout="@layout/fragment_manage_employees" >
+        <action
+            android:id="@+id/go_to_add_employee"
+            app:destination="@id/addEmployee" />
+        <action
+            android:id="@+id/go_to_update_employee"
+            app:destination="@id/updateEmployee" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addEmployee"
+        android:name="com.example.employeemanagement.UI.AddEmployee"
+        android:label="fragment_add_employee"
+        tools:layout="@layout/fragment_add_employee" >
+        <action
+            android:id="@+id/return_to_manage_employees_from_add_employee"
+            app:destination="@id/manageEmployees" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateEmployee"
+        android:name="com.example.employeemanagement.UI.UpdateEmployee"
+        android:label="fragment_update_employee"
+        tools:layout="@layout/fragment_update_employee" >
+        <action
+            android:id="@+id/return_to_manage_employees_from_update"
+            app:destination="@id/manageEmployees" />
+    </fragment>
+</navigation>
+
+
+
+
