@@ -79,7 +79,6 @@ class ManageEmployees : Fragment() {
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                Log.i(TAG, "onCreateView onSwiped: "+mAdapter.employees[viewHolder.absoluteAdapterPosition])
                 val id: Int = mAdapter.employees[viewHolder.absoluteAdapterPosition].id
                 mViewModel.deleteEmployee(id)
                 mAdapter.notifyDataSetChanged()

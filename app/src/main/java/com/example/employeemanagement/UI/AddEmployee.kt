@@ -38,8 +38,8 @@ class AddEmployee : Fragment() {
 
     private fun addEmployee() {
         viewLifecycleOwner.lifecycleScope.launch {
-            if (mBinding.employeeName.text.isEmpty() || mBinding.employeeSurname.text.isEmpty() || mBinding.employeeAge.text.toString()
-                    .isEmpty() || mBinding.employeeWorkplace.text.isEmpty() || mBinding.employeeSalary.text.toString()
+            if (mBinding.addEmployeeName.text.isEmpty() || mBinding.addEmployeeSurname.text.isEmpty() || mBinding.addEmployeeAge.text.toString()
+                    .isEmpty() || mBinding.addEmployeeWorkplace.text.isEmpty() || mBinding.addEmployeeSalary.text.toString()
                     .isEmpty()
             ) {
                 Toast.makeText(requireContext(), "Complete the data", Toast.LENGTH_SHORT).show()
@@ -47,11 +47,11 @@ class AddEmployee : Fragment() {
                 mViewModel.insertNewEmployee(
                     EmployeeModel(
                         0,
-                        name = mBinding.employeeName.text.toString(),
-                        surname = mBinding.employeeSurname.text.toString(),
-                        age = mBinding.employeeAge.text.toString().toInt(),
-                        workplace = mBinding.employeeWorkplace.text.toString(),
-                        salary = mBinding.employeeSalary.text.toString().toDouble()
+                        name = mBinding.addEmployeeName.text.toString(),
+                        surname = mBinding.addEmployeeSurname.text.toString(),
+                        age = mBinding.addEmployeeAge.text.toString().toInt(),
+                        workplace = mBinding.addEmployeeWorkplace.text.toString(),
+                        salary = mBinding.addEmployeeSalary.text.toString().toDouble()
                     )
                 )
                 findNavController().navigate(AddEmployeeDirections.returnToManageEmployeesFromAddEmployee())
