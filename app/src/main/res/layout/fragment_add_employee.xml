@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
-        android:id="@+id/employee_name"
+        android:id="@+id/add_employee_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
@@ -28,40 +28,40 @@
         app:layout_constraintTop_toBottomOf="@id/add_employee_tv"/>
 
     <EditText
-        android:id="@+id/employee_surname"
+        android:id="@+id/add_employee_surname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="@string/surname"
         android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        app:layout_constraintTop_toBottomOf="@id/employee_name"/>
+        app:layout_constraintTop_toBottomOf="@id/add_employee_name"/>
 
     <EditText
-        android:id="@+id/employee_age"
+        android:id="@+id/add_employee_age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="@string/age"
         android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@id/employee_surname"/>
+        app:layout_constraintTop_toBottomOf="@id/add_employee_surname"/>
 
     <EditText
-        android:id="@+id/employee_workplace"
+        android:id="@+id/add_employee_workplace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="@string/workplace"
         android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        app:layout_constraintTop_toBottomOf="@id/employee_age"/>
+        app:layout_constraintTop_toBottomOf="@id/add_employee_age"/>
 
     <EditText
-        android:id="@+id/employee_salary"
+        android:id="@+id/add_employee_salary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="@string/salary"
         android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@id/employee_workplace"/>
+        app:layout_constraintTop_toBottomOf="@id/add_employee_workplace"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_new_employee"
@@ -71,5 +71,6 @@
         android:layout_gravity="end"
         android:layout_margin="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/Theme.MaterialComponents" />
 </androidx.constraintlayout.widget.ConstraintLayout>
