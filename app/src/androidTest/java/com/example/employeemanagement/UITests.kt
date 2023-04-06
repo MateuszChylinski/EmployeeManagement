@@ -326,6 +326,10 @@ class UITests {
             )
         )
         floatingActionButton6.perform(click())
+
+
+        val rv = onView(withId(R.id.manage_rv))
+        rv.perform(swipeRight())
     }
 
     private fun childAtPosition(
